@@ -105,8 +105,8 @@ class CareerCompatibilityEngine:
 
         return True, ""
 
-    @staticmethod
-    def scale_similarity(sim: float, base: float = 0.15, max_lim: float = 0.70) -> float:
+@staticmethod
+    def scale_similarity(sim: float, base: float = 0.12, max_lim: float = 0.32) -> float:
         scaled = ((sim - base) / (max_lim - base)) * 100.0
         return float(np.clip(scaled, 0.0, 100.0))
 
